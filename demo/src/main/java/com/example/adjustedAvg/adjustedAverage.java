@@ -2,16 +2,20 @@ package com.example.adjustedAvg;
 
 public class adjustedAverage {
     public static double findAverage(int[] nums) {
-        // define length to avoid checking in loop
-        int length = nums.length;
-        int total = 0;
-
-        // loop through given arr
-        for (int i = 0; i < nums.length; i++) {
-            total += nums[i];
+        if (nums.length < 3) {
+            return 0;
         }
+
+        int min = nums[0], max = nums[0];
+        int adjustedAvg = 0;
         
-        //return adjusted average
-        return total / length;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > max) { max = nums[i]; }
+            if (nums[i] < min) { min = nums[i]; }
+
+            adjustedAvg += nums[i];
+        }
+
+        return (adjustedAvg - (min + max)) / (double)(nums.length - 2);
     }
 }
