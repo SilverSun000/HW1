@@ -6,6 +6,7 @@ public class adjustedAverage {
             return 0;
         }
 
+        // long type to help with majority of integer overflow cases
         long min = nums[0], max = nums[0];
         long adjustedAvg = 0;
         
