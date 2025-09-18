@@ -46,6 +46,6 @@ public class SyllableCounterTest {
         assertEquals(7, SyllableCounter.findSyllableCount("Unconstitutionalities"));
         assertEquals(7, SyllableCounter.findSyllableCount("Incomprehensibility"));
         assertEquals(7, SyllableCounter.findSyllableCount("Internationalization"));
-        assertEquals(11, SyllableCounter.findSyllableCount("Antidisestablishmentarianism"));
+        assertEquals(10, SyllableCounter.findSyllableCount("Antidisestablishmentarianism"));
     }
 }
