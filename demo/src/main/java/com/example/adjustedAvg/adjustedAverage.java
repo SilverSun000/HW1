@@ -6,8 +6,8 @@ public class adjustedAverage {
             return 0;
         }
 
-        int min = nums[0], max = nums[0];
-        int adjustedAvg = 0;
+        long min = nums[0], max = nums[0];
+        long adjustedAvg = 0;
         
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > max) { max = nums[i]; }
